@@ -21,5 +21,3 @@ build_script:
 artifacts:
   - path: src-tauri\target\release\bundle\nsis\*.exe
     name: KalendarzInstaller
-  - path: src-tauri\target\release\bundle\msi\*.msi
-    name: KalendarzMSI
