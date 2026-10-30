@@ -11,7 +11,8 @@ install:
       Invoke-WebRequest -Uri "https://win.rustup.rs" -OutFile "rustup-init.exe"
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
-  - npm install --os=win32 --cpu=x64
+  - npm install
+  - npm install @rolldown/binding-win32-x64-msvc --no-save
 
 build_script:
   - npm run tauri build
