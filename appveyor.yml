@@ -1,3 +1,9 @@
+image: Visual Studio 2022
+
+environment:
+  nodejs_version: "20"
+  CI: "true"
+
 install:
   - ps: Install-Product node $env:nodejs_version
   - ps: |
@@ -7,3 +13,11 @@ install:
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install -g pnpm
   - pnpm install --no-frozen-lockfile --unsafe-perm --ignore-scripts
+
+build:
+  script:
+    - pnpm run tauri build
+
+artifacts:
+  - path: src-tauri\target\release\bundle\nsis\*.exe
+    name: KalendarzInstaller
