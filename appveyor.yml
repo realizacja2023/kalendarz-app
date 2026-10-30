@@ -12,7 +12,8 @@ install:
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install -g pnpm
-  - pnpm install --no-frozen-lockfile --unsafe-perm --ignore-scripts
+  - pnpm config set onlyBuiltDependencies "[\"*\"]" --global
+  - pnpm install --no-frozen-lockfile --unsafe-perm
 
 build_script:
   - pnpm run tauri build
