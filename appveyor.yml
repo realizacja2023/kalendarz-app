@@ -11,6 +11,12 @@ install:
       Invoke-WebRequest -Uri "https://win.rustup.rs" -OutFile "rustup-init.exe"
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
-  - npm install -g pnpm
-  - pnpm config set ignore-scripts false
-  - pnpm install --no-frozen-lockfile --unsafe-perm --config.ignore-build-scripts=false
+  - npm install -g pnpm@9
+  - pnpm install --no-frozen-lockfile --unsafe-perm
+
+build_script:
+  - pnpm run tauri build
+
+artifacts:
+  - path: src-tauri\target\release\bundle\nsis\*.exe
+    name: KalendarzInstaller
