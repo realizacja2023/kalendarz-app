@@ -6,4 +6,4 @@ install:
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install -g pnpm
-  - pnpm install --no-frozen-lockfile --unsafe-perm --ignore-build-scripts
+  - pnpm install --no-frozen-lockfile --unsafe-perm --ignore-scripts
