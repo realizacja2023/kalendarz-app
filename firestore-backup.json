@@ -1,0 +1,97 @@
+{
+  "2Nk7mr4SyEnXJkb1o9Jk": {
+    "attachment": null,
+    "description": "",
+    "updatedAt": 1793250503071,
+    "time": "09:00",
+    "createdAt": 1793250503071,
+    "readBy": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3",
+      "3JnBxForIzbteiWuNhvPalNsNSv2",
+      "7yjXU1gSlmVyLs2qCi4dqE1CxEY2"
+    ],
+    "comments": [],
+    "equipment": [],
+    "date": "2026-12-01",
+    "category": "Rodzinne",
+    "title": "Sąd",
+    "attendees": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3",
+      "7yjXU1gSlmVyLs2qCi4dqE1CxEY2"
+    ],
+    "location": "Żory"
+  },
+  "G35M6AruuQZueZdlUr2z": {
+    "updatedAt": 1793293937301,
+    "description": "",
+    "createdAt": 1793293722578,
+    "date": "2026-12-04",
+    "location": "Krotoszyn",
+    "equipment": [],
+    "category": "Lasery",
+    "time": "00:00",
+    "readBy": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3",
+      "7yjXU1gSlmVyLs2qCi4dqE1CxEY2"
+    ],
+    "attachment": null,
+    "shoppingList": [],
+    "attendees": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3"
+    ],
+    "comments": [],
+    "title": "Mariusz Lasery"
+  },
+  "NBLlNIfSZw2eqnpD7zQJ": {
+    "shoppingList": [],
+    "location": "Brak lokalizacji",
+    "category": "Obsługa",
+    "createdAt": 1793245830377,
+    "time": "08:00",
+    "comments": [
+      {
+        "text": "ciekawe kto będzie ładować auto",
+        "id": "1793302220799",
+        "author": "tosemjatojo@gmail.com",
+        "createdAt": "29.10.2026, 20:30:20"
+      }
+    ],
+    "readBy": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3",
+      "dZb7z1xxRYeODMz40lpVNDC1eLG3",
+      "KpeMBKFfP1TSaXxm5us3GOxAmhv2",
+      "7yjXU1gSlmVyLs2qCi4dqE1CxEY2",
+      "T60BJYtRlPgAhXRvsEqvIzmzbww1"
+    ],
+    "title": "Katedra",
+    "date": "2026-11-06",
+    "attendees": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3",
+      "KpeMBKFfP1TSaXxm5us3GOxAmhv2",
+      "dZb7z1xxRYeODMz40lpVNDC1eLG3"
+    ],
+    "description": "",
+    "equipment": []
+  },
+  "ToDmxZA2y4fjMvttR3KC": {
+    "equipment": [],
+    "createdAt": 1793293813892,
+    "location": "Czerwionka Boisko",
+    "updatedAt": 1793293918795,
+    "readBy": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3",
+      "7yjXU1gSlmVyLs2qCi4dqE1CxEY2"
+    ],
+    "category": "Lasery",
+    "attendees": [
+      "zvpCWBI3G5hOfutFyj1LypgBN8C3"
+    ],
+    "date": "2026-11-19",
+    "description": "",
+    "title": "Mariusz Lasery",
+    "time": "00:00",
+    "attachment": null,
+    "shoppingList": [],
+    "comments": []
+  }
+}
