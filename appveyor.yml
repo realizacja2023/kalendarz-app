@@ -12,7 +12,13 @@ install:
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install -g pnpm
-  - pnpm install --no-frozen-lockfile --unsafe-perm --config.only-built-dependencies=*
+  - ps: |
+      $pkgPath = "package.json"
+      $pkg = Get-Content $pkgPath | ConvertFrom-Json
+      if (-not $pkg.pnpm) { $pkg | Add-Member -NotePropertyName "pnpm" -NotePropertyValue @{} }
+      $pkg.pnpm | Add-Member -NotePropertyName "onlyBuiltDependencies" -NotePropertyValue @("*") -Force
+      $pkg | ConvertTo-Json -Depth 10 | Set-Content $pkgPath
+  - pnpm install --no-frozen-lockfile --unsafe-perm
 
 build_script:
   - pnpm run tauri build
