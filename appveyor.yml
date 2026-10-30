@@ -14,9 +14,8 @@ install:
   - npm install -g pnpm
   - pnpm install --no-frozen-lockfile --unsafe-perm --ignore-scripts
 
-build:
-  script:
-    - pnpm run tauri build
+build_script:
+  - pnpm run tauri build
 
 artifacts:
   - path: src-tauri\target\release\bundle\nsis\*.exe
