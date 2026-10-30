@@ -5,7 +5,10 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - ps: iex ((New-Object System.Net.WebClient).DownloadString('https://win.rustup.rs')) -y
+  - ps: |
+      $rustupArgs = "-y"
+      Invoke-WebRequest -Uri "https://win.rustup.rs" -OutFile "rustup-init.exe"
+      Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install
 
