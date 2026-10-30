@@ -1,9 +1,3 @@
-image: Visual Studio 2022
-
-environment:
-  nodejs_version: "20"
-  CI: "true"
-
 install:
   - ps: Install-Product node $env:nodejs_version
   - ps: |
@@ -12,12 +6,4 @@ install:
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install -g pnpm
-  - pnpm config set only-built-dependencies[] ""
-  - pnpm install --no-frozen-lockfile --unsafe-perm
-
-build_script:
-  - pnpm run tauri build
-
-artifacts:
-  - path: src-tauri\target\release\bundle\nsis\*.exe
-    name: KalendarzInstaller
+  - pnpm install --no-frozen-lockfile --unsafe-perm --config.only-built-dependencies=false
