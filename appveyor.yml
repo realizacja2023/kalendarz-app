@@ -1,0 +1,19 @@
+image: Visual Studio 2022
+
+environment:
+  nodejs_version: "20"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - ps: iex ((New-Object System.Net.WebClient).DownloadString('https://win.rustup.rs')) -y
+  - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
+  - npm install
+
+build_script:
+  - npm run tauri build
+
+artifacts:
+  - path: src-tauri\target\release\bundle\nsis\*.exe
+    name: KalendarzInstaller
+  - path: src-tauri\target\release\bundle\msi\*.msi
+    name: KalendarzMSI
