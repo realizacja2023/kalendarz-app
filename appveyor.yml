@@ -3,6 +3,7 @@ image: Visual Studio 2022
 environment:
   nodejs_version: "20"
   CI: "true"
+  PNPM_ALLOW_BUILD: "*"
 
 install:
   - ps: Install-Product node $env:nodejs_version
@@ -12,7 +13,6 @@ install:
       Start-Process -FilePath "rustup-init.exe" -ArgumentList "-y" -Wait
   - set PATH=%USERPROFILE%\.cargo\bin;%PATH%
   - npm install -g pnpm
-  - echo only-built-dependencies[]=* > .npmrc
   - pnpm install --no-frozen-lockfile --unsafe-perm
 
 build_script:
